@@ -1,12 +1,19 @@
-package org.example.selfmade.memo;
+package org.example.selfmade.firstCollection;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 일급 컬렉션이란?
+/*
+    일급 컬렉션이란
+    Collection을 Wrapping하면서, 그 외 다른 멤버 변수가 없는 상태
+
+    사용시 이점
+    1. 비지니스에 종속적인 자료구조
+    2. Collection의 불변성을 보장 ⭐
+    3. 상태와 행위를 한 곳에서 정리
+    4. 이름이 있는 컬렉션
  */
-public class FirstCollection {
+public class FirstCollectionExample2 {
     public static void main(String[] args) {
 
         List<String> basicList = new ArrayList<>();
@@ -26,7 +33,7 @@ public class FirstCollection {
 
 class BirthStringList {
     private static final int LENGTH = 8;
-    private List<String> birtStringList;
+    private final List<String> birtStringList;
 
     public BirthStringList(List<String> birtStringList) {
         validateLength(birtStringList);
