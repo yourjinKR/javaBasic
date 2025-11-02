@@ -26,13 +26,16 @@ public class MapExample2 {
         school.put(1,list1);
         school.put(2,list3);
 
-        System.out.println(school);
-
-
         // computeIfAbsent를 활용한 만들기
         Map<Integer, List<Student>> school2 = new HashMap<>();
 
-        list.forEach(student -> {
+        List<Student> studentList = List.of(
+                new Student(1, "유어진"),
+                new Student(1, "유지민"),
+                new Student(3, "유재석")
+        );
+
+        studentList.forEach(student -> {
             school2.computeIfAbsent(student.getGrade(), key -> new ArrayList<>()).add(student);
         });
 
