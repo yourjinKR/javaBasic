@@ -12,6 +12,7 @@ public class MapExample1 {
         Member member2 = new Member("정형돈");
 
         map.put(team, List.of(member1, member2));
+
     }
 }
 
@@ -36,5 +37,16 @@ class Member {
 
     public String getName() {
         return name;
+    }
+}
+
+
+class A {
+    public static final int a = 1;
+}
+
+class B extends A {
+    public int getA() {
+        return a;
     }
 }
