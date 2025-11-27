@@ -8,5 +8,6 @@ public class IOExample {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         System.out.println(a+b);
+        scanner.close();
     }
 }
