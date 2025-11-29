@@ -11,35 +11,39 @@ package org.example.selfmade.oop;
  */
 public class EX01 {
     public static void main(String[] args) {
+        class Parent {
+            int age;
+
+            Parent() {
+                this(40);
+                System.out.println("부모 기본 생성자");
+            }
+            Parent(int age) {
+                this.age = age;
+            }
+
+            int getAge() {
+                return this.age;
+            }
+        }
+
+        class Child extends Parent {
+            int age;
+
+            Child() {
+                this(20);
+                System.out.println("자식 기본 생성자");
+            }
+            Child(int age) {
+                this.age = age;
+            }
+        }
+
         Child c1 = new Child(400);
         System.out.println(c1.getAge());
-    }
-}
 
-class Parent {
-    int age;
 
-    Parent() {
-        this(40);
-        System.out.println("부모 기본 생성자");
-    }
-    Parent(int age) {
-        this.age = age;
-    }
-
-    int getAge() {
-        return this.age;
-    }
-}
-
-class Child extends Parent {
-    int age;
-
-    Child() {
-        this(20);
-        System.out.println("자식 기본 생성자");
-    }
-    Child(int age) {
-        this.age = age;
+        Animal animal = new Lion();
+        System.out.println(animal.name());
     }
 }
