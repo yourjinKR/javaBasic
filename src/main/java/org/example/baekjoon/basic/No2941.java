@@ -85,4 +85,16 @@ public class No2941 {
 //            "s=",
 //            "z="
 //    );
+
+
+    // 정규식을 활용한 풀이법
+    public static void main2(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String s = br.readLine();
+
+        String sep = s.replaceAll("c=|c-|dz=|d-|lj|nj|s=|z=", "0");
+
+        System.out.print(sep.length());
+    }
 }
