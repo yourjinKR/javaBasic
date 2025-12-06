@@ -2,6 +2,7 @@ package org.example.selfmade.time;
 
 import java.text.SimpleDateFormat;
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -74,6 +75,10 @@ public class Time {
          */
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println("localDateTime : " + localDateTime);
+
+        LocalDateTime birth = LocalDateTime.of(2000, 3, 20, 0, 0);
+        System.out.println("현재 나이 : " + ChronoUnit.YEARS.between(birth, localDateTime));
+
 
         System.out.println("==============================================================================");
 
