@@ -1,0 +1,4 @@
+#Properties Example
+#Tue Dec 23 13:42:10 KST 2025
+language=\uD55C\uAE00
+timeout=30
